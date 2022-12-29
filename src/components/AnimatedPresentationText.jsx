@@ -17,8 +17,8 @@ export const AnimatedPresentationText = () => {
     <Typed
                 strings={[
                     "Hi! My name is Marcos and I'm front end developer.",
-                    "Hi! My name is Marcos and I'm React developer",
-                    "Hi! My name is Marcos and I'm passionated about features "]}
+                    "Hi! My name is Marcos and I'm React developer.",
+                    "Hi! My name is Marcos and I'm passionated about features and designs. "]}
                     typeSpeed={40}
                     backSpeed={50}
                     loop >
