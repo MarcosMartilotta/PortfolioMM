@@ -5,21 +5,21 @@ import { useState } from "react";
 const FormStyled = styled.form`
   width: 70%;
   height: 60rem;
+  margin: 2rem auto;
+  padding: 2rem;
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
   background-color: #4e4e4e8b;
   color: white;
+  border-radius: 1.5rem;
 
-  h2 {
-    font-size: 4rem;
-    font-weight: 500;
-    letter-spacing: 0.5rem;
+  div {
+    width: 80%;
   }
-
   label {
     font-size: 2rem;
     display: block;
@@ -27,15 +27,43 @@ const FormStyled = styled.form`
   }
 
   input {
-    width: 20rem;
+    width: 100%;
     height: 3rem;
+    padding: 1rem;
+    background-color: #000000ab;
+    opacity: 0.5;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 0.47);
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem;
+    background-color: #000000ab;
+    opacity: 0.5;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px -1px rgba(255, 255, 255, 0.47);
+    color: white;
+    font-size: 1.5rem;
   }
 
   button {
-    width: 20rem;
+    width: 100%;
     height: 4rem;
-  }
+    background-color: #056cf2;
+    border-radius: 1rem;
+    border: none;
+    color: white;
 
+    &:hover {
+      cursor: pointer;
+    }
+  }
   p {
     color: #ff7a7a;
     margin-top: 1rem;
@@ -88,7 +116,6 @@ const ContactForm = () => {
         touched,
       }) => (
         <FormStyled onSubmit={handleSubmit}>
-          <h2>Contact me!</h2>
           <div>
             <label htmlFor="name">Name and surname</label>
             <input

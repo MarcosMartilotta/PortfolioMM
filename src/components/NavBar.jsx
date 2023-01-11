@@ -137,7 +137,7 @@ const ToggleDarkMode = styled.div`
   }
 `;
 
-const TechnologiesContainer = styled.div`
+const LinksContainer = styled.div`
   a {
     margin-right: 6rem;
   }
@@ -158,8 +158,8 @@ export const NavBar = () => {
           <span className="slider"></span>
         </div>
       </ToggleDarkMode>
-      <TechnologiesContainer className={`links ${click ? "active" : ""}`}>
-        <a onClick={handleClick} href="/#">
+      <LinksContainer className={`links ${click ? "active" : ""}`}>
+        <a onClick={handleClick} href="/tech">
           Technologies
         </a>
         <a onClick={handleClick} href="/#">
@@ -171,7 +171,7 @@ export const NavBar = () => {
         <a onClick={handleClick} href="/#">
           Contact
         </a>
-      </TechnologiesContainer>
+      </LinksContainer>
       <Logo src={logo} alt={logo} />
       <div className="burguer">
         <Hamburguer clicked={click} handleClick={handleClick} />

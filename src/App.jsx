@@ -16,7 +16,7 @@ const Main = styled.div`
 const PresentationContainer = styled.div`
   width: 100vw;
   height: 60rem;
-  max-height: 80rem;
+  max-height: 60rem;
   letter-spacing: 1rem;
   text-align: left;
 `;
@@ -34,9 +34,17 @@ const ProjectsContainer = styled.div`
 `;
 
 const ContactContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: auto;
-  text-align: center;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 0.5rem;
+    color: white;
+    text-align: center;
+  }
 `;
 
 const FooterContainer = styled.footer`
@@ -49,16 +57,17 @@ function App() {
   return (
     <Main>
       <NavBar />
-
-      <AnimatedPresentationText />
-
-      <TechnologiesContainer>
+      <PresentationContainer>
+        <AnimatedPresentationText />
+      </PresentationContainer>
+      <TechnologiesContainer id="/#tech">
         <Technologies />
       </TechnologiesContainer>
       <ProjectsContainer>
         <Projects />
       </ProjectsContainer>
       <ContactContainer>
+        <h2>Contact me!</h2>
         <ContactForm />
       </ContactContainer>
       <FooterContainer>
