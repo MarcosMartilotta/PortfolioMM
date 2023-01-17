@@ -6,6 +6,7 @@ import { Technologies } from "./components/Technologies";
 import Projects from "./components/Projects";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import AboutMe from "./components/AboutMe";
 
 const Main = styled.div`
   width: 100%;
@@ -28,6 +29,12 @@ const TechnologiesContainer = styled.div`
 `;
 
 const ProjectsContainer = styled.div`
+  width: 100vw;
+  height: fit-content;
+  text-align: center;
+`;
+
+const AboutMeContainer = styled.div`
   width: 100vw;
   height: fit-content;
   text-align: center;
@@ -60,13 +67,16 @@ function App() {
       <PresentationContainer>
         <AnimatedPresentationText />
       </PresentationContainer>
-      <TechnologiesContainer id="/#tech">
+      <TechnologiesContainer id="tech">
         <Technologies />
       </TechnologiesContainer>
-      <ProjectsContainer>
+      <ProjectsContainer id="projects">
         <Projects />
       </ProjectsContainer>
-      <ContactContainer>
+      <AboutMeContainer id="about">
+        <AboutMe />
+      </AboutMeContainer>
+      <ContactContainer id="contact">
         <h2>Contact me!</h2>
         <ContactForm />
       </ContactContainer>

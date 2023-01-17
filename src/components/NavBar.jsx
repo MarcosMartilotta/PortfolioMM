@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Hamburguer } from "./MobileNav/Hamburguer";
 import logo from "../Img/icons8-leon-100.png";
 import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -30,25 +31,37 @@ const StyledNav = styled.nav`
     left: -2000px;
     text-align: center;
     transition: all 0.6s ease;
-    font-size: 3rem;
-    a {
+    font-size: 2.5rem;
+    .nav-item {
+      padding: 1rem;
       text-decoration: none;
       color: white;
       margin-top: 6rem;
       display: block;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: darkblue;
+      }
+      &.active {
+        background-color: darkblue;
+      }
     }
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
-      a {
+      .nav-item {
         font-size: 2rem;
-        color: white;
         display: inline;
       }
     }
   }
   @media (max-width: 768px) {
     .links.active {
+      padding-left: 10rem;
+      padding-right: 10rem;
       width: 100vw;
       height: 90vh;
       display: flex;
@@ -56,10 +69,6 @@ const StyledNav = styled.nav`
       margin-left: auto;
       left: 0;
       text-align: center;
-
-      a {
-        color: white;
-      }
     }
   }
 `;
@@ -73,7 +82,7 @@ const BgLinks = styled.div`
   z-index: -1;
   transition: all 0.6s ease;
   &.active {
-    border-radius: 0 0 80% 0;
+    border-radius: 0 0 60% 0;
     left: 0;
     width: 100vw;
     height: 90vw;
@@ -83,6 +92,9 @@ const BgLinks = styled.div`
 const Logo = styled.img`
   width: 4rem;
   height: 4rem;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const ToggleDarkMode = styled.div`
@@ -138,8 +150,8 @@ const ToggleDarkMode = styled.div`
 `;
 
 const LinksContainer = styled.div`
-  a {
-    margin-right: 6rem;
+  .nav-item {
+    margin-right: 3rem;
   }
 `;
 
@@ -150,6 +162,9 @@ export const NavBar = () => {
     setClick(!click);
   };
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <StyledNav>
       <ToggleDarkMode>
@@ -159,20 +174,56 @@ export const NavBar = () => {
         </div>
       </ToggleDarkMode>
       <LinksContainer className={`links ${click ? "active" : ""}`}>
-        <a onClick={handleClick} href="/tech">
+        <Link
+          className="nav-item"
+          activeClass="active"
+          to="tech"
+          spy="true"
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={handleClick}
+        >
           Technologies
-        </a>
-        <a onClick={handleClick} href="/#">
+        </Link>
+        <Link
+          className="nav-item"
+          activeClass="active"
+          to="projects"
+          spy="true"
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={handleClick}
+        >
           Projects
-        </a>
-        <a onClick={handleClick} href="/#">
+        </Link>
+        <Link
+          className="nav-item"
+          activeClass="active"
+          to="about"
+          spy="true"
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={handleClick}
+        >
           About Me
-        </a>
-        <a onClick={handleClick} href="/#">
+        </Link>
+        <Link
+          className="nav-item"
+          activeClass="active"
+          to="contact"
+          spy="true"
+          smooth={true}
+          offset={-70}
+          duration={500}
+          onClick={handleClick}
+        >
           Contact
-        </a>
+        </Link>
       </LinksContainer>
-      <Logo src={logo} alt={logo} />
+      <Logo src={logo} alt={logo} onClick={scrollToTop} />
       <div className="burguer">
         <Hamburguer clicked={click} handleClick={handleClick} />
         <BgLinks className={`initial ${click ? "active" : ""}`}></BgLinks>

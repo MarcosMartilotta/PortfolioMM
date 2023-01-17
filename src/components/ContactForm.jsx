@@ -102,6 +102,22 @@ const ContactForm = () => {
         return errors;
       }}
       onSubmit={(values, { resetForm }) => {
+        fetch("https://formsubmit.co/ajax/marcos.martilotta@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            message: values.coments,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.log(error));
+
         resetForm();
         setMyForm(true);
         setTimeout(() => setMyForm(false), 5000);
