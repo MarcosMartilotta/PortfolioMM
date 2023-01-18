@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import logoReact from "../Img/logoreact.svg";
 import logoJs from "../Img/logoJs.svg";
@@ -9,7 +9,6 @@ import logoStyled from "../Img/styled-components-1.svg";
 import logoVite from "../Img/vitejs.svg";
 import logoWebpack from "../Img/webpack.svg";
 import logoGit from "../Img/git-icon-logo-svgrepo-com.svg";
-import { useState } from "react";
 
 const TechnologiesContainer = styled.div`
   width: 100%;
