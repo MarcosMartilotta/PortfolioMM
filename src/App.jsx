@@ -85,8 +85,9 @@ function App() {
       <ProjectsContainer
         id="projects"
         data-aos="fade"
-        data-aos-offset="50"
-        data-aos-anchor-placement="top-bottom"
+        data-aos-offset="1"
+        data-aos-easing="ease-in-cubic"
+        data-aos-anchor-placement="top-center"
       >
         <Projects />
       </ProjectsContainer>
@@ -94,7 +95,8 @@ function App() {
         id="about"
         data-aos="fade"
         data-aos-offset="1"
-        data-aos-anchor-placement="top-bottom"
+        data-aos-easing="ease-in-cubic"
+        data-aos-anchor-placement="top-center"
       >
         <AboutMe />
       </AboutMeContainer>
@@ -102,7 +104,8 @@ function App() {
         id="contact"
         data-aos="fade"
         data-aos-offset="1"
-        data-aos-anchor-placement="top-bottom"
+        data-aos-easing="ease-in-cubic"
+        data-aos-anchor-placement="top-center"
       >
         <h2>Contact me!</h2>
         <ContactForm />

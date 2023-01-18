@@ -16,12 +16,13 @@ const Container = styled.div`
     font-weight: 400;
     letter-spacing: 0.5rem;
     color: white;
+    text-align: left;
   }
 
   @media (max-width: 767px) {
-    padding: 2rem 14rem;
+    padding: 2rem 0rem;
     p {
-      padding: 2rem 0rem;
+      padding: 2rem 2rem;
     }
   }
 `;
@@ -31,10 +32,11 @@ const AboutMe = () => {
     <Container>
       <h2>About me</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum
-        voluptate dicta repudiandae nam corrupti? Expedita, officiis provident
-        quae nobis iusto totam quis voluptate nisi eum voluptates ad,
-        consequatur nostrum nam. Atque ipsam quibusdam necessitatibus soluta
+        I am currently looking for my first professional experience in the IT
+        world. I was self-taught in front end technologies and Every day I carry
+        out projects to reinforce my knowledge. Also, I meeting collaborating in
+        the development and growth of the web "El valor justo", where you can
+        see rental analytics in Buenos Aires. I look forward to meeting you!
       </p>
     </Container>
   );
