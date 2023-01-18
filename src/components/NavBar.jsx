@@ -36,7 +36,7 @@ const StyledNav = styled.nav`
       padding: 1rem;
       text-decoration: none;
       color: white;
-      margin-top: 6rem;
+      margin-top: 3rem;
       display: block;
       border-radius: 0.5rem;
       transition: all 0.2s ease;
@@ -85,7 +85,7 @@ const BgLinks = styled.div`
     border-radius: 0 0 60% 0;
     left: 0;
     width: 100vw;
-    height: 90vw;
+    height: 98vw;
   }
 `;
 

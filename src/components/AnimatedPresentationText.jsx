@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Typed from "react-typed";
 
 const MyText = styled.div`
-  width: 90vw;
+  width: 100vw;
   height: 60rem;
-  padding: 10rem;
+  padding: 10rem 2rem;
   text-align: left;
   font-size: 5rem;
   color: #fff;

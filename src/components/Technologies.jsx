@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import logoReact from "../Img/logoreact.svg";
 import logoJs from "../Img/logoJs.svg";
@@ -9,6 +9,7 @@ import logoStyled from "../Img/styled-components-1.svg";
 import logoVite from "../Img/vitejs.svg";
 import logoWebpack from "../Img/webpack.svg";
 import logoGit from "../Img/git-icon-logo-svgrepo-com.svg";
+import { useState } from "react";
 
 const TechnologiesContainer = styled.div`
   width: 100%;
@@ -46,7 +47,7 @@ const Container = styled.div`
 export const Technologies = () => {
   return (
     <>
-      <Subtitle>Technologies that i use</Subtitle>
+      <Subtitle>Skills</Subtitle>
       <TechnologiesContainer>
         <Container>
           <Logos src={logoReact} alt="React Logo" />
